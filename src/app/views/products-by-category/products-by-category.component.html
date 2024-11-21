@@ -1,0 +1,15 @@
+<section class="menu-container">
+  <div class="menu-inner-content">
+    <app-title>{{ categoryName }}</app-title>
+    <div class="menu-items">
+      <app-card
+        *ngFor="let product of products"
+        [itemData]="product"
+        cardClass="primary"
+      ></app-card>
+    </div>
+    <app-button buttonClass="primary" route="#" type="button" size="large">
+      VER CARDÁPIO COMPLETO
+    </app-button>
+  </div>
+</section>

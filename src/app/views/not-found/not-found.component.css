@@ -1,0 +1,22 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  & div {
+    align-items: center;
+    margin-top: 4rem;
+    justify-content: center;
+  }
+
+  .not-found-inner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+app-title {
+  display: flex;
+  align-items: center;
+  margin-top: 10rem;
+  justify-content: center;
+}

@@ -1,0 +1,23 @@
+<section class="detail-container">
+  <div class="detail-inner-content" *ngIf="product">
+    <app-title>DETALHES</app-title>
+    <div class="detail-item">
+      <app-card
+        [itemData]="product"
+        [showPrice]="true"
+        cardClass="secondary"
+      ></app-card>
+      <app-description
+        [description]="product.fullDescription"
+      ></app-description>
+    </div>
+    <app-button
+      buttonClass="primary"
+      route="/order"
+      type="button"
+      size="default"
+    >
+      COMPRAR
+    </app-button>
+  </div>
+</section>

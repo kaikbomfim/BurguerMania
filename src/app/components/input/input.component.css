@@ -1,0 +1,57 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 24.75rem;
+}
+
+.input-label {
+  font-size: 1.563rem;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.input-field {
+  border: 1px solid #a5a4a4;
+  border-radius: 0.313rem;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.default {
+  width: 100%;
+  height: 2.5rem;
+}
+
+.large {
+  width: 55.125rem;
+  height: 10.938rem;
+  padding: 0.5rem;
+  line-height: 1.5rem;
+  font-family: sans-serif;
+  resize: none;
+  text-align: left;
+  vertical-align: top;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.required-indicator {
+  color: var(--primary-color);
+  margin-left: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .input-container {
+    width: 100%; /* O input ocupa a largura total */
+  }
+
+  .large {
+    width: 100%; /* O textarea também ocupa a largura total */
+  }
+}

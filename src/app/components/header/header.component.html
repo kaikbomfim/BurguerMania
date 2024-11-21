@@ -1,0 +1,33 @@
+<!-- Cabeçalho da página com navegação -->
+<header class="header">
+  <section class="header-inner-content">
+    <a routerLink="/">
+      <img src="assets/logo.png" alt="BurguerMania" class="logo" />
+    </a>
+    <nav [class.show-menu]="isMenuOpen">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active">Início</a></li>
+        <li>
+          <a routerLink="/menu" routerLinkActive="active">Categoria</a>
+        </li>
+        <li><a routerLink="/menu" routerLinkActive="active">Cardápio</a></li>
+        <li>
+          <a routerLink="/not-found" routerLinkActive="active">Localização</a>
+        </li>
+        <li>
+          <a routerLink="/not-found" routerLinkActive="active">Contato</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-icon-container">
+      <button
+        mat-icon-button
+        aria-label="Menu"
+        class="menu-button"
+        (click)="toggleMenu()"
+      >
+        <mat-icon>{{ menuIcon }}</mat-icon>
+      </button>
+    </div>
+  </section>
+</header>

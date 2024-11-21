@@ -1,0 +1,132 @@
+/* Header */
+.header {
+  background-color: var(--background-color);
+  position: sticky;
+  padding-inline: 4.75rem;
+  top: 0;
+  z-index: 99;
+
+  @media (max-width: 425px) {
+    padding-inline: 1.5rem;
+  }
+
+  & section {
+    display: flex; /* Posiciona os itens do menu horizontalmente */
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+/* Conteúdo do header */
+.header-inner-content {
+  max-width: 1097px;
+  margin-inline: auto;
+  padding-top: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 425px) {
+    padding-top: 1.5rem;
+  }
+
+  & a {
+    text-decoration: none;
+    & img.logo {
+      @media (max-width: 425px) {
+        max-width: 150px;
+        height: auto;
+      }
+    }
+  }
+}
+
+nav {
+  flex: 1;
+  & ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  & li {
+    & a {
+      color: var(--secondary-color);
+      font-size: 1.5rem;
+      margin-right: 1.75rem;
+      font-weight: 600;
+    }
+    &:hover {
+      transform: translateY(-5px); /* Efeito vertical ao passar o mouse */
+      transition: all 0.2s ease-in-out;
+      a {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+/* Contêiner dos ícones do menu */
+.header-icon-container button {
+  color: var(--secondary-color);
+  border: none;
+  background-color: var(--background-color);
+  & mat-icon {
+    font-weight: 600;
+  }
+}
+
+/* Botão do menu (oculto por padrão) */
+.menu-button {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  nav {
+    position: absolute;
+    border: solid var(--primary-color) 1px;
+    border-radius: 2rem;
+    background-color: var(--background-color);
+    width: 100%;
+    top: 6rem;
+    display: none;
+
+    @media (max-width: 425px) {
+      top: 5rem; /* Ajusta a posição do menu dropdown */
+    }
+
+    & ul {
+      flex-direction: column;
+      & li {
+        text-align: center;
+        padding: 0.5rem;
+        @media (max-width: 425px) {
+          padding: 0.25rem;
+          & a {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            &:hover {
+              color: var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Exibe a navegação ao ativar a classe */
+  nav.show-menu {
+    display: block;
+  }
+
+  .menu-button {
+    display: block; /* Exibe o botão do menu */
+    visibility: visible;
+    position: relative;
+  }
+}

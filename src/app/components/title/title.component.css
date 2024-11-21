@@ -1,0 +1,17 @@
+p {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 2.813rem;
+  line-height: 3.404rem;
+  height: auto;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  p {
+    font-size: 1.75rem; /* Texto menor para dispositivos menores */
+    line-height: 2.25rem; /* Ajusta espaçamento vertical */
+    margin-bottom: 1.5rem; /* Reduz o espaçamento em telas menores */
+  }
+}

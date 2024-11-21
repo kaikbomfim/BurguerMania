@@ -1,0 +1,49 @@
+button {
+  border: none;
+  border-radius: 0%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+/* Estilo principal do botão */
+button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+/* Tamanho padrão */
+.default {
+  width: 16rem;
+  height: 4.125rem;
+}
+
+/* Tamanho grande */
+.large {
+  width: 25.25rem;
+  height: 4.625rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.513rem;
+}
+
+button:hover {
+  border: var(--primary-color) solid 1px;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  button {
+    width: 90%;
+    max-width: 20rem;
+    height: auto;
+    padding: 0.8rem 1rem;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}

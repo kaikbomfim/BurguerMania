@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--background-color); /* Cor de fundo */
+}
+
+:root {
+  --background-color: #ffffff; /* Cor de fundo */
+  --primary-color: #ed0000; /* Cor principal */
+  --secondary-color: #521d16; /* Cor secundária */
+}

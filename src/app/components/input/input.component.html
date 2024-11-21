@@ -1,0 +1,27 @@
+<div class="input-container">
+  <label [for]="name" class="input-label">
+    {{ label }} <span *ngIf="required" class="required-indicator">*</span>
+  </label>
+  <ng-container *ngIf="type === 'textarea'; else inputField">
+    <textarea
+      [id]="name"
+      [name]="name"
+      [placeholder]="placeholder"
+      [required]="required"
+      class="input-field"
+      [ngClass]="size"
+    ></textarea>
+  </ng-container>
+
+  <ng-template #inputField>
+    <input
+      [type]="type"
+      [id]="name"
+      [name]="name"
+      [placeholder]="placeholder"
+      [required]="required"
+      class="input-field"
+      [ngClass]="size"
+    />
+  </ng-template>
+</div>

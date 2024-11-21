@@ -1,0 +1,18 @@
+<a [routerLink]="generateLink()">
+  <section class="product-container">
+    <div class="product-card" [ngClass]="cardClass">
+      <div class="product-card-inner-content">
+        <img
+          [src]="itemData.image"
+          alt="{{ itemData.name }}"
+          class="product-image"
+        />
+        <p class="product-name">{{ itemData.name }}</p>
+        <p class="product-description">{{ itemData.description }}</p>
+        <p *ngIf="showPrice && itemData.price" class="product-price">
+          {{ itemData.price | replaceDotWithComma }} R$
+        </p>
+      </div>
+    </div>
+  </section>
+</a>

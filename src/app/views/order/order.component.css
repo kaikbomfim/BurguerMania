@@ -1,0 +1,54 @@
+.order-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.order-inner-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 15rem;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 62.938rem;
+  padding-inline: 0;
+  padding-bottom: 2rem;
+  border: 1px solid #dfd9d9;
+}
+
+.order-form {
+  width: 100%;
+  padding-block: 3rem;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-inline: 4rem;
+}
+
+.observation {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .order-item {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .form-group {
+    flex-direction: column;
+    padding-inline: 1rem;
+  }
+}
