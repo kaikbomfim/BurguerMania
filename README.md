@@ -19,7 +19,7 @@ Os dados exibidos são fornecidos por uma **API fictícia**, que resgata informa
 
 ## Deploy da Aplicação
 
-Confira à BurguerMania acessando o link a seguir: [BurguerMania](https://burguermania.onrender.com/).
+Confira à BurguerMania acessando o link a seguir: [BurguerMania](https://burguermania-ten.vercel.app/).
 
 ## **Instruções de Uso**
 
