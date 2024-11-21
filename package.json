@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"ng serve\" \"json-server --watch db.json --port 3000\"",
-    "start:prod": "concurrently \"node dist/burguermania-frontend/main.js\" \"json-server --watch db.json --port 3000\"",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:burguermania-frontend": "node dist/burguermania-frontend/server/server.mjs"
