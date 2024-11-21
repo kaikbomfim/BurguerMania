@@ -6,12 +6,12 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root'
 })
 export class ProductsService {
-  private baseUrl = environment.apiUrl;
+  private baseUrl = `${environment.apiUrl}/products`;
 
   constructor() { }
 
   async getAllProducts(): Promise<IItem[]> {
-    const response = await fetch(this.baseUrl);
+    const response = await fetch(`${this.baseUrl}`);
     return response.json();
   }
 

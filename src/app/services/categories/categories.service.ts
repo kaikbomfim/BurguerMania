@@ -6,12 +6,12 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root'
 })
 export class CategoriesService {
-  private baseUrl = environment.apiUrl;
+  private baseUrl = `${environment.apiUrl}/categories`;
 
   constructor() { }
 
   async getAllCategories(): Promise<IItem[]> {
-    const response = await fetch(`${this.baseUrl}/categories`);
+    const response = await fetch(`${this.baseUrl}`);
     return response.json();
   }
 
