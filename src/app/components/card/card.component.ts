@@ -18,11 +18,11 @@ export class CardComponent {
 
   generateLink(): string {
     // Se for um produto, redireciona para a página do produto
-    if (this.itemData.category) {
-      return `/products/${this.itemData.id}`;
+    if (this.itemData.categoryId) {
+      return `/product/${this.itemData.id}`;
     }
 
     // Se for uma categoria, redireciona para a página de produtos dessa categoria
-    return `/categories/${this.itemData.id}`;
+    return `/category/${this.itemData.id}`;
   }
 }

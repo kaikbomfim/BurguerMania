@@ -12,6 +12,6 @@ export const routes: Routes = [
     { path: 'menu', component: MenuComponent, title: 'Cardápio' },
     { path: 'order', component: OrderComponent, title: 'Pedido' },
     { path: 'not-found', component: NotFoundComponent, title: 'Página não encontrada' },
-    { path: 'categories/:id', component: ProductsByCategoryComponent, title: 'Categoria' },
-    { path: 'products/:id', component: ProductDetailComponent, title: 'Detalhes' },
+    { path: 'category/:id', component: ProductsByCategoryComponent, title: 'Categoria' },
+    { path: 'product/:id', component: ProductDetailComponent, title: 'Detalhes' },
 ];

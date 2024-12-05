@@ -13,19 +13,24 @@ import { DescriptionComponent } from '../../components/description/description.c
   standalone: true,
   imports: [CommonModule, RouterModule, CardComponent, DescriptionComponent, TitleComponent, ButtonComponent],
   templateUrl: './product-detail.component.html',
-  styleUrl: './product-detail.component.css'
+  styleUrls: ['./product-detail.component.css'] // Correção: 'styleUrls' no plural
 })
 export class ProductDetailComponent {
   private route = inject(ActivatedRoute);
   private productsService = inject(ProductsService);
 
-  product!: IItem;
+  product?: IItem; // Tornar a propriedade opcional (pode ser 'undefined' inicialmente)
 
   constructor() {
     const productId = Number(this.route.snapshot.paramMap.get('id'));
 
     this.productsService.getProductById(productId).then((product) => {
-      this.product = product;
+      if (product) {
+        this.product = product;
+      } else {
+        console.error('Produto não encontrado.');
+        // Aqui você pode adicionar uma ação adicional, como redirecionar para uma página de erro.
+      }
     });
   }
 }
