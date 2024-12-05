@@ -2,7 +2,7 @@
   <div class="order-inner-content">
     <app-title>PEDIDO</app-title>
     <div class="order-item">
-      <form class="order-form">
+      <form class="order-form" (ngSubmit)="finalizeOrder()">
         <div class="form-group">
           <app-input
             label="Produto"
@@ -10,6 +10,7 @@
             [required]="true"
             placeholder="Digite o nome do produto"
             size="default"
+            [(ngModel)]="product1"
           ></app-input>
           <app-input
             label="Quantidade"
@@ -18,6 +19,7 @@
             [required]="true"
             placeholder="Digite a quantidade"
             size="default"
+            [(ngModel)]="quantity1"
           ></app-input>
         </div>
 
@@ -28,6 +30,7 @@
             [required]="true"
             placeholder="Digite o nome do produto"
             size="default"
+            [(ngModel)]="product2"
           ></app-input>
           <app-input
             label="Quantidade"
@@ -36,6 +39,7 @@
             [required]="true"
             placeholder="Digite a quantidade"
             size="default"
+            [(ngModel)]="quantity2"
           ></app-input>
         </div>
 
@@ -43,22 +47,17 @@
           <app-input
             label="Observação"
             name="observacao"
-            type="textarea"
+            type="text"
             placeholder="Digite uma observação"
             class="observation"
             size="large"
             [required]="true"
+            [(ngModel)]="observation"
           ></app-input>
         </div>
+
+        <button type="submit" class="primary-button">FINALIZAR</button>
       </form>
-      <app-button
-        buttonClass="primary"
-        route="/order"
-        type="button"
-        size="default"
-      >
-        FINALIZAR
-      </app-button>
     </div>
   </div>
 </section>
